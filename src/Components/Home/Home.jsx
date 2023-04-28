@@ -151,11 +151,11 @@ export default function Home() {
         </div>
 
         <div className="col-10  px-lg-5 pe-5 py-5">
-            <div className='text-end me-2'>
+            <div className='text-center me-2'>
             <button onClick={handleShow}  className='btn btn-info text-white mb-2 '><i className="fa-solid fa-plus"></i> Add Note</button>
             </div>
           <div className="row g-2">
-                {userNotes? userNotes.map((note)=>(<Note getUserNotes={getUserNotes} deleteNote={deleteNote} key={note._id} noteDetails={note} />)):<h5>You not have any notes yet .</h5>}
+                {userNotes? userNotes.map((note)=>(<Note getUserNotes={getUserNotes} deleteNote={deleteNote} key={note._id} noteDetails={note} />)):<h5 className='text-center mt-5'> Not have any notes yet.</h5>}
           </div>
         </div>
     </div>

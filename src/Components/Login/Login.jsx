@@ -23,6 +23,11 @@ export default function Login() {
         localStorage.setItem("userToken", data.token)
         navigate("/home")
     }
+    else
+    {
+      setRegError(data.message)
+      setIsLoading(false)
+    }
   }
 
 
@@ -66,7 +71,7 @@ export default function Login() {
               {formik.errors.password && formik.touched.password? <p className='text-danger text-start'>{formik.errors.password}</p>:null}
               {regError && <p className='alert alert-danger'>{regError}</p>}
               {isLoading ? <button type='submit' className='btn btn-info text-light w-100 rounded-2 mt-2'><i className='fa-solid fa-spinner fa-spin'></i></button>:<button type='submit' className='btn btn-info text-light w-100 rounded-2 mt-2'>Login</button>}
-              <p className='pt-2'>Don't have account? <Link className='text-decoration-none' to='/'>Sign Up Now</Link></p>
+              <p className='pt-2'>Don't have account? <Link className='text-decoration-none' to='/'>Sign Up</Link></p>
             </form>
             </div>
         </div>
