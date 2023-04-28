@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root
+{
+  --bg-color:rgb(236, 235, 234);;
+  --main-font:'Poppins', sans-serif;
+}
+
+body
+{
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+}
+.signup-container
+{
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.fs-7
+{
+  font-size: 12px !important;
+  font-weight: lighter;
+}
+
+.sidebar-element
+{
+  transition: background-color 0.5s; ;
+}
+
+.sidebar-element:hover
+{
+  background-color: rgb(87, 87, 110)
+}
+
+.cursor-pointer 
+{
+  cursor: pointer;
+}
+
+.fs-small
+{
+  font-size: 14px;
+}
